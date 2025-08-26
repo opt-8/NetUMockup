@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Enthusiasts Community - NetU</title>
+    <link rel="stylesheet" href="group-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-users"></i>
+                    <span>NetU</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/32x32" alt="User" class="user-avatar">
+                    <span class="user-name">John Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Group Header -->
+    <header class="group-header">
+        <div class="group-cover">
+            <img src="https://via.placeholder.com/1200x300/667eea/ffffff?text=Tech+Community" alt="Group Cover">
+            <div class="group-cover-overlay">
+                <div class="group-info">
+                    <div class="group-avatar">
+                        <img src="https://via.placeholder.com/120x120/3b82f6/ffffff?text=TE" alt="Group Avatar">
+                    </div>
+                    <div class="group-details">
+                        <h1>Tech Enthusiasts Community</h1>
+                        <p class="group-description">A community for technology enthusiasts to share knowledge, discuss latest trends, and connect with like-minded individuals.</p>
+                        <div class="group-meta">
+                            <span class="member-count"><i class="fas fa-users"></i> 2,847 members</span>
+                            <span class="group-type"><i class="fas fa-globe"></i> Public</span>
+                            <span class="group-category"><i class="fas fa-tag"></i> Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-actions">
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Join Group
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="group-content">
+        <div class="content-container">
+            <!-- Left Sidebar -->
+            <aside class="group-sidebar">
+                <div class="sidebar-section">
+                    <h3>About</h3>
+                    <p>A vibrant community where tech enthusiasts share insights, discuss emerging technologies, and build meaningful connections.</p>
+                    <div class="group-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2,847</span>
+                            <span class="stat-label">Members</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">23</span>
+                            <span class="stat-label">Events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Upcoming Events</h3>
+                    <div class="event-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Dec</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>AI Development Workshop</h4>
+                                <p>Learn the latest in AI development</p>
+                                <span class="event-time">2:00 PM - 5:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">Dec</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Web Development Meetup</h4>
+                                <p>Frontend frameworks discussion</p>
+                                <span class="event-time">7:00 PM - 9:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-secondary full-width">View All Events</button>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Recent Members</h3>
+                    <div class="member-list">
+                        <div class="member-item">
+                            <img src="https://via.placeholder.com/40x40" alt="Member" class="member-avatar">
+                            <div class="member-info">
+                                <span class="member-name">Sarah Johnson</span>
+                                <span class="member-joined">Joined 2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="member-item">
+                            <img src="https://via.placeholder.com/40x40" alt="Member" class="member-avatar">
+                            <div class="member-info">
+                                <span class="member-name">Mike Chen</span>
+                                <span class="member-joined">Joined 1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="member-item">
+                            <img src="https://via.placeholder.com/40x40" alt="Member" class="member-avatar">
+                            <div class="member-info">
+                                <span class="member-name">Emily Rodriguez</span>
+                                <span class="member-joined">Joined 3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Feed -->
+            <section class="group-feed">
+                <!-- Create Post (Admin Only) -->
+                <div class="create-post admin-only" style="display: none;">
+                    <div class="post-composer">
+                        <img src="https://via.placeholder.com/48x48" alt="User" class="user-avatar">
+                        <div class="composer-content">
+                            <textarea placeholder="What's on your mind? Share with the group..." rows="3"></textarea>
+                            <div class="composer-actions">
+                                <button class="composer-btn">
+                                    <i class="fas fa-image"></i> Photo
+                                </button>
+                                <button class="composer-btn">
+                                    <i class="fas fa-video"></i> Video
+                                </button>
+                                <button class="composer-btn">
+                                    <i class="fas fa-calendar"></i> Event
+                                </button>
+                                <button class="composer-btn">
+                                    <i class="fas fa-file"></i> File
+                                </button>
+                                <button class="btn-primary">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed Filters -->
+                <div class="feed-filters">
+                    <button class="filter-btn active">All Posts</button>
+                    <button class="filter-btn">Announcements</button>
+                    <button class="filter-btn">Events</button>
+                    <button class="filter-btn">Discussions</button>
+                </div>
+
+                <!-- Posts Feed -->
+                <div class="posts-feed">
+                    <!-- Post 1 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="https://via.placeholder.com/48x48" alt="User" class="user-avatar">
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <span class="author-name">John Smith</span>
+                                    <span class="author-role">Admin</span>
+                                </div>
+                                <span class="post-time">2 hours ago</span>
+                            </div>
+                            <button class="post-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="post-content">
+                            <p>🚀 Exciting news! We're hosting our first AI Development Workshop this weekend. Learn about the latest advancements in machine learning and get hands-on experience with cutting-edge tools.</p>
+                            <div class="post-image">
+                                <img src="https://via.placeholder.com/600x300/3b82f6/ffffff?text=AI+Workshop" alt="AI Workshop">
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-comment"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                        </div>
+                        <div class="post-stats">
+                            <span>24 likes • 8 comments • 3 shares</span>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="https://via.placeholder.com/48x48" alt="User" class="user-avatar">
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <span class="author-name">Lisa Wang</span>
+                                    <span class="author-role">Moderator</span>
+                                </div>
+                                <span class="post-time">1 day ago</span>
+                            </div>
+                            <button class="post-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="post-content">
+                            <p>What's your favorite programming language and why? Let's have a friendly discussion about the pros and cons of different languages! 💻</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-comment"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                        </div>
+                        <div class="post-stats">
+                            <span>45 likes • 23 comments • 5 shares</span>
+                        </div>
+                    </article>
+
+                    <!-- Event Post -->
+                    <article class="post event-post">
+                        <div class="post-header">
+                            <img src="https://via.placeholder.com/48x48" alt="User" class="user-avatar">
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <span class="author-name">David Brown</span>
+                                    <span class="author-role">Event Organizer</span>
+                                </div>
+                                <span class="post-time">3 days ago</span>
+                            </div>
+                            <button class="post-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="post-content">
+                            <div class="event-card">
+                                <div class="event-header">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Upcoming Event</span>
+                                </div>
+                                <h3>Web Development Meetup</h3>
+                                <p>Join us for an evening of frontend framework discussions, networking, and pizza!</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Dec 22, 2024 • 7:00 PM - 9:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Tech Hub Downtown • 123 Innovation St</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>45 attending • 12 spots left</span>
+                                    </div>
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn-primary">Attend</button>
+                                    <button class="btn-secondary">Maybe</button>
+                                    <button class="btn-secondary">Share</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="group-sidebar right-sidebar">
+                <div class="sidebar-section">
+                    <h3>Group Rules</h3>
+                    <ul class="rules-list">
+                        <li>Be respectful and inclusive</li>
+                        <li>No spam or self-promotion</li>
+                        <li>Keep discussions relevant to tech</li>
+                        <li>Share knowledge, not just opinions</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Popular Topics</h3>
+                    <div class="topics-list">
+                        <span class="topic-tag">#JavaScript</span>
+                        <span class="topic-tag">#Python</span>
+                        <span class="topic-tag">#AI</span>
+                        <span class="topic-tag">#WebDev</span>
+                        <span class="topic-tag">#Mobile</span>
+                        <span class="topic-tag">#Cloud</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Group Files</h3>
+                    <div class="files-list">
+                        <div class="file-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="file-info">
+                                <span class="file-name">Group Guidelines.pdf</span>
+                                <span class="file-meta">2.3 MB • 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="file-item">
+                            <i class="fas fa-file-image"></i>
+                            <div class="file-info">
+                                <span class="file-name">Event Banner.png</span>
+                                <span class="file-meta">1.8 MB • 1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Floating Admin Navigation -->
+    <div class="floating-admin-nav">
+                    <div class="admin-nav-tabs">
+                <a href="group-public.html" class="admin-nav-tab active">
+                    <i class="fas fa-eye"></i>
+                    <span>Public View</span>
+                </a>
+                <a href="group-admin.html" class="admin-nav-tab">
+                    <i class="fas fa-tools"></i>
+                    <span>Admin Dashboard</span>
+                </a>
+                                    <a href="group-stats.html" class="admin-nav-tab">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                <a href="index.html" class="admin-nav-tab">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Group Settings</span>
+                </a>
+            </div>
+    </div>
+
+    <script src="group-script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Analytics - Tech Enthusiasts Community</title>
+    <link rel="stylesheet" href="group-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-view">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-users"></i>
+                    <span>NetU</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/32x32" alt="User" class="user-avatar">
+                    <span class="user-name">John Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="admin-header-left">
+                <div class="admin-header-title">
+                    <h1><i class="fas fa-chart-bar"></i> Group Analytics</h1>
+                    <div class="admin-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <p>Analytics and insights about your group: Tech Enthusiasts Community</p>
+            </div>
+            <div class="admin-header-right">
+                <div class="date-selector">
+                    <button class="btn-secondary">
+                        <i class="fas fa-calendar"></i>
+                        <span>Last 30 Days</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Statistics Content -->
+    <main class="admin-content">
+        <div class="admin-container">
+            <!-- Overview Stats -->
+            <section class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2,847</h3>
+                        <p>Total Members</p>
+                        <span class="stat-change positive">+12% this month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>45,230</h3>
+                        <p>Monthly Views</p>
+                        <span class="stat-change positive">+8% this month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1,234</h3>
+                        <p>Posts This Month</p>
+                        <span class="stat-change positive">+15% this month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>8,456</h3>
+                        <p>Engagement Rate</p>
+                        <span class="stat-change positive">+5% this month</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Analytics -->
+            <div class="analytics-grid">
+                <!-- Growth Trends Chart -->
+                <section class="analytics-section full-width">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-line"></i> Growth Trends</h2>
+                        <div class="chart-controls">
+                            <button class="btn-secondary active">Members</button>
+                            <button class="btn-secondary">Views</button>
+                            <button class="btn-secondary">Engagement</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-line"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Top Content -->
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-star"></i> Top Content</h2>
+                        <button class="btn-secondary">View All</button>
+                    </div>
+                    <div class="content-list">
+                        <div class="content-item">
+                            <div class="content-rank">1</div>
+                            <div class="content-details">
+                                <span class="content-title">"Best Programming Languages 2024"</span>
+                                <span class="content-stats">2.3k views • 156 likes</span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-rank">2</div>
+                            <div class="content-details">
+                                <span class="content-title">"AI Development Workshop"</span>
+                                <span class="content-stats">1.8k views • 89 likes</span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-rank">3</div>
+                            <div class="content-details">
+                                <span class="content-title">"Web Development Tips"</span>
+                                <span class="content-stats">1.5k views • 67 likes</span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-rank">4</div>
+                            <div class="content-details">
+                                <span class="content-title">"Mobile App Development Guide"</span>
+                                <span class="content-stats">1.2k views • 45 likes</span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-rank">5</div>
+                            <div class="content-details">
+                                <span class="content-title">"Database Optimization Techniques"</span>
+                                <span class="content-stats">980 views • 34 likes</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Member Activity -->
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-users"></i> Member Activity</h2>
+                        <button class="btn-secondary">Export Data</button>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-label">Active Members</span>
+                            <span class="activity-value">1,234</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-label">New This Week</span>
+                            <span class="activity-value">45</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-label">Avg. Session Time</span>
+                            <span class="activity-value">12m 34s</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-label">Bounce Rate</span>
+                            <span class="activity-value">23%</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-label">Returning Users</span>
+                            <span class="activity-value">67%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Engagement Metrics -->
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-heart"></i> Engagement</h2>
+                        <button class="btn-secondary">Details</button>
+                    </div>
+                    <div class="engagement-metrics">
+                        <div class="metric-item">
+                            <div class="metric-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">5,234</span>
+                                <span class="metric-label">Total Likes</span>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">2,156</span>
+                                <span class="metric-label">Total Comments</span>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">
+                                <i class="fas fa-share"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">892</span>
+                                <span class="metric-label">Total Shares</span>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">1,445</span>
+                                <span class="metric-label">Total Saves</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Demographics -->
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-globe"></i> Demographics</h2>
+                        <button class="btn-secondary">Full Report</button>
+                    </div>
+                    <div class="demographics-list">
+                        <div class="demo-item">
+                            <span class="demo-label">Age Groups</span>
+                            <div class="demo-bars">
+                                <div class="demo-bar">
+                                    <span>18-24</span>
+                                    <div class="bar" style="width: 35%"></div>
+                                    <span>35%</span>
+                                </div>
+                                <div class="demo-bar">
+                                    <span>25-34</span>
+                                    <div class="bar" style="width: 45%"></div>
+                                    <span>45%</span>
+                                </div>
+                                <div class="demo-bar">
+                                    <span>35-44</span>
+                                    <div class="bar" style="width: 15%"></div>
+                                    <span>15%</span>
+                                </div>
+                                <div class="demo-bar">
+                                    <span>45+</span>
+                                    <div class="bar" style="width: 5%"></div>
+                                    <span>5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <span class="demo-label">Top Locations</span>
+                            <div class="location-list">
+                                <div class="location-item">
+                                    <span>United States</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="location-item">
+                                    <span>United Kingdom</span>
+                                    <span>18%</span>
+                                </div>
+                                <div class="location-item">
+                                    <span>Canada</span>
+                                    <span>12%</span>
+                                </div>
+                                <div class="location-item">
+                                    <span>Australia</span>
+                                    <span>8%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Admin Navigation -->
+    <div class="floating-admin-nav">
+        <div class="admin-nav-tabs">
+            <a href="group-public.html" class="admin-nav-tab">
+                <i class="fas fa-eye"></i>
+                <span>Public View</span>
+            </a>
+            <a href="group-admin.html" class="admin-nav-tab">
+                <i class="fas fa-tools"></i>
+                <span>Admin Dashboard</span>
+            </a>
+                                <a href="group-stats.html" class="admin-nav-tab active">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+            <a href="index.html" class="admin-nav-tab">
+                <i class="fas fa-sliders-h"></i>
+                <span>Group Settings</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="group-script.js"></script>
+</body>
+</html> 

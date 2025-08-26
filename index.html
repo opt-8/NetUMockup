@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Admin Settings - NetU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-users"></i>
+                    <span>NetU</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/32x32" alt="User" class="user-avatar">
+                    <span class="user-name">John Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="admin-header-content">
+                            <div class="admin-header-left">
+                <div class="admin-header-title">
+                    <h1><i class="fas fa-sliders-h"></i> Group Settings</h1>
+                    <div class="admin-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <p>Configure your group: Tech Enthusiasts Community</p>
+            </div>
+                <div class="admin-header-right">
+                    <button class="btn-primary" onclick="saveSettings()">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="admin-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="general">
+                    <i class="fas fa-info-circle"></i>
+                    <span>General Info</span>
+                </button>
+                <button class="nav-tab" data-tab="privacy">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Privacy</span>
+                </button>
+                <button class="nav-tab" data-tab="monetization">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Monetization</span>
+                </button>
+
+                <button class="nav-tab" data-tab="members">
+                    <i class="fas fa-users"></i>
+                    <span>Members</span>
+                </button>
+                <button class="nav-tab" data-tab="files">
+                    <i class="fas fa-folder"></i>
+                    <span>Files</span>
+                </button>
+                <button class="nav-tab" data-tab="organizers">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Organizers</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="admin-content">
+            <!-- General Info Tab -->
+            <div class="tab-content active" id="general">
+                <div class="content-header">
+                    <h2>Edit Group Information</h2>
+                    <p>Update your group's basic information and appearance</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Group Details</h3>
+                        <div class="form-group">
+                            <label for="group-name">Group Name</label>
+                            <input type="text" id="group-name" value="Tech Enthusiasts Community" placeholder="Enter group name">
+                        </div>
+                        <div class="form-group">
+                            <label for="group-description">Description</label>
+                            <textarea id="group-description" rows="4" placeholder="Describe your group...">A community for technology enthusiasts to share knowledge, discuss latest trends, and connect with like-minded individuals.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-category">Category</label>
+                            <select id="group-category">
+                                <option value="technology">Technology</option>
+                                <option value="business">Business</option>
+                                <option value="education">Education</option>
+                                <option value="hobby">Hobby</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Group Media</h3>
+                        <div class="media-upload">
+                            <div class="upload-area">
+                                <i class="fas fa-image"></i>
+                                <p>Upload Group Cover Image</p>
+                                <button class="btn-upload">Choose File</button>
+                            </div>
+                        </div>
+                        <div class="media-upload">
+                            <div class="upload-area">
+                                <i class="fas fa-camera"></i>
+                                <p>Upload Group Icon</p>
+                                <button class="btn-upload">Choose File</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Contact Information</h3>
+                        <div class="form-group">
+                            <label for="group-email">Contact Email</label>
+                            <input type="email" id="group-email" value="admin@techenthusiasts.com" placeholder="admin@group.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="group-website">Website (Optional)</label>
+                            <input type="url" id="group-website" value="https://techenthusiasts.com" placeholder="https://your-website.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Settings Tab -->
+            <div class="tab-content" id="privacy">
+                <div class="content-header">
+                    <h2>Privacy Settings</h2>
+                    <p>Control who can see and join your group</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Group Visibility</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="visibility" value="public" checked>
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Public</h4>
+                                    <p>Anyone can find and join your group</p>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="visibility" value="private">
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Private</h4>
+                                    <p>Only invited members can join</p>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="visibility" value="secret">
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Secret</h4>
+                                    <p>Hidden from search, invite only</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Content Privacy</h3>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Show member list to non-members</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Allow non-members to see posts</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Require approval for new posts</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Search Settings</h3>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Appear in search results</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Show in recommendations</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monetization Settings Tab -->
+            <div class="tab-content" id="monetization">
+                <div class="content-header">
+                    <h2>Monetization Settings</h2>
+                    <p>Set up revenue streams for your group</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Premium Membership</h3>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Enable premium membership</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="premium-price">Monthly Price ($)</label>
+                            <input type="number" id="premium-price" value="9.99" min="0" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="premium-benefits">Premium Benefits</label>
+                            <textarea id="premium-benefits" rows="3" placeholder="Describe premium member benefits...">Access to exclusive content, priority support, ad-free experience, early access to events</textarea>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Event Ticketing</h3>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Enable paid events</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ticket-fee">Platform Fee (%)</label>
+                            <input type="number" id="ticket-fee" value="5" min="0" max="20" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Donations & Tips</h3>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Enable member donations</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="donation-goal">Monthly Goal ($)</label>
+                            <input type="number" id="donation-goal" value="500" min="0">
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Revenue Analytics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">$2,450</span>
+                                <span class="stat-label">This Month</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">156</span>
+                                <span class="stat-label">Premium Members</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">$18,200</span>
+                                <span class="stat-label">Total Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Members Tab -->
+            <div class="tab-content" id="members">
+                <div class="content-header">
+                    <h2>Member Settings</h2>
+                    <p>Manage your group's membership and permissions</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Join Settings</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="join-type" value="open" checked>
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Open</h4>
+                                    <p>Anyone can join immediately</p>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="join-type" value="approval">
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Approval Required</h4>
+                                    <p>Admin must approve new members</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="welcome-message">Welcome Message</label>
+                            <textarea id="welcome-message" rows="3" placeholder="Message sent to new members...">Welcome to Tech Enthusiasts Community! We're excited to have you join our community of technology lovers.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Member Roles</h3>
+                        <div class="role-settings">
+                            <div class="role-item">
+                                <span>Admin</span>
+                                <span class="role-count">3 members</span>
+                            </div>
+                            <div class="role-item">
+                                <span>Moderator</span>
+                                <span class="role-count">8 members</span>
+                            </div>
+                            <div class="role-item">
+                                <span>Member</span>
+                                <span class="role-count">2,836 members</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Manage Roles</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Member Permissions</h3>
+                        <div class="permission-grid">
+                            <div class="permission-item">
+                                <span>Post Content</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Comment on Posts</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Upload Files</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Create Events</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting-card full-width">
+                        <h3>Recent Members</h3>
+                        <div class="member-list">
+                            <div class="member-item">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-name">Sarah Johnson</span>
+                                    <span class="member-joined">Joined 2 hours ago</span>
+                                </div>
+                                <div class="member-actions">
+                                    <button class="btn-small">Message</button>
+                                    <button class="btn-small">View Profile</button>
+                                </div>
+                            </div>
+                            <div class="member-item">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-name">Mike Chen</span>
+                                    <span class="member-joined">Joined 1 day ago</span>
+                                </div>
+                                <div class="member-actions">
+                                    <button class="btn-small">Message</button>
+                                    <button class="btn-small">View Profile</button>
+                                </div>
+                            </div>
+                            <div class="member-item">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-name">Emily Rodriguez</span>
+                                    <span class="member-joined">Joined 3 days ago</span>
+                                </div>
+                                <div class="member-actions">
+                                    <button class="btn-small">Message</button>
+                                    <button class="btn-small">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">View All Members</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Files Tab -->
+            <div class="tab-content" id="files">
+                <div class="content-header">
+                    <h2>Group Files</h2>
+                    <p>Manage shared files and documents</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>File Settings</h3>
+                        <div class="form-group">
+                            <label for="storage-limit">Storage Limit</label>
+                            <select id="storage-limit">
+                                <option value="1gb">1 GB</option>
+                                <option value="5gb" selected>5 GB</option>
+                                <option value="10gb">10 GB</option>
+                                <option value="unlimited">Unlimited</option>
+                            </select>
+                        </div>
+                        <div class="storage-info">
+                            <span>Used: 2.3 GB / 5 GB</span>
+                            <div class="storage-bar">
+                                <div class="storage-fill" style="width: 46%"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>Allow member uploads</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Require approval for uploads</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting-card full-width">
+                        <h3>Recent Files</h3>
+                        <div class="file-list">
+                            <div class="file-item">
+                                <div class="file-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="file-info">
+                                    <span class="file-name">Group Guidelines.pdf</span>
+                                    <span class="file-meta">2.3 MB • Uploaded by Admin • 2 days ago</span>
+                                </div>
+                                <div class="file-actions">
+                                    <button class="btn-small"><i class="fas fa-download"></i></button>
+                                    <button class="btn-small"><i class="fas fa-share"></i></button>
+                                    <button class="btn-small"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="file-item">
+                                <div class="file-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div class="file-info">
+                                    <span class="file-name">Event Banner.png</span>
+                                    <span class="file-meta">1.8 MB • Uploaded by Moderator • 1 week ago</span>
+                                </div>
+                                <div class="file-actions">
+                                    <button class="btn-small"><i class="fas fa-download"></i></button>
+                                    <button class="btn-small"><i class="fas fa-share"></i></button>
+                                    <button class="btn-small"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="file-item">
+                                <div class="file-icon">
+                                    <i class="fas fa-file-word"></i>
+                                </div>
+                                <div class="file-info">
+                                    <span class="file-name">Meeting Notes.docx</span>
+                                    <span class="file-meta">456 KB • Uploaded by Member • 2 weeks ago</span>
+                                </div>
+                                <div class="file-actions">
+                                    <button class="btn-small"><i class="fas fa-download"></i></button>
+                                    <button class="btn-small"><i class="fas fa-share"></i></button>
+                                    <button class="btn-small"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Upload New File</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organizers Tab -->
+            <div class="tab-content" id="organizers">
+                <div class="content-header">
+                    <h2>Organizer Settings</h2>
+                    <p>Manage event organizers and their permissions</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Organizer Permissions</h3>
+                        <div class="permission-grid">
+                            <div class="permission-item">
+                                <span>Create Events</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Edit Events</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Delete Events</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Manage Attendees</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Send Notifications</span>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="permission-item">
+                                <span>Access Analytics</span>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Event Approval</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="event-approval" value="auto" checked>
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Auto-approve</h4>
+                                    <p>Events are published immediately</p>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="event-approval" value="manual">
+                                <span class="radio-custom"></span>
+                                <div class="option-content">
+                                    <h4>Manual approval</h4>
+                                    <p>Admin must approve new events</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="setting-card full-width">
+                        <h3>Current Organizers</h3>
+                        <div class="organizer-list">
+                            <div class="organizer-item">
+                                <div class="organizer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="organizer-info">
+                                    <span class="organizer-name">John Smith</span>
+                                    <span class="organizer-role">Lead Organizer</span>
+                                    <span class="organizer-events">12 events created</span>
+                                </div>
+                                <div class="organizer-actions">
+                                    <button class="btn-small">Edit Permissions</button>
+                                    <button class="btn-small danger">Remove</button>
+                                </div>
+                            </div>
+                            <div class="organizer-item">
+                                <div class="organizer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="organizer-info">
+                                    <span class="organizer-name">Lisa Wang</span>
+                                    <span class="organizer-role">Event Organizer</span>
+                                    <span class="organizer-events">8 events created</span>
+                                </div>
+                                <div class="organizer-actions">
+                                    <button class="btn-small">Edit Permissions</button>
+                                    <button class="btn-small danger">Remove</button>
+                                </div>
+                            </div>
+                            <div class="organizer-item">
+                                <div class="organizer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="organizer-info">
+                                    <span class="organizer-name">David Brown</span>
+                                    <span class="organizer-role">Event Organizer</span>
+                                    <span class="organizer-events">5 events created</span>
+                                </div>
+                                <div class="organizer-actions">
+                                    <button class="btn-small">Edit Permissions</button>
+                                    <button class="btn-small danger">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Add New Organizer</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Floating Admin Navigation -->
+    <div class="floating-admin-nav">
+                    <div class="admin-nav-tabs">
+                <a href="group-public.html" class="admin-nav-tab">
+                    <i class="fas fa-eye"></i>
+                    <span>Public View</span>
+                </a>
+                <a href="group-admin.html" class="admin-nav-tab">
+                    <i class="fas fa-tools"></i>
+                    <span>Admin Dashboard</span>
+                </a>
+                                    <a href="group-stats.html" class="admin-nav-tab">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                <a href="index.html" class="admin-nav-tab active">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Group Settings</span>
+                </a>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
